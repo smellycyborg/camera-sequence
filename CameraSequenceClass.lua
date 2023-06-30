@@ -146,8 +146,8 @@ function sequencePrototype:playAll(delayTime)
 end
 
 sequencePrototype.__index = sequencePrototype
-sequence.__metatable = "This metatabl is locked."
-sequence.__newindex = function(_, _, _)
+sequencePrototype.__metatable = "This metatabl is locked."
+sequencePrototype.__newindex = function(_, _, _)
     error("This metatable is locked.")
 end
 
